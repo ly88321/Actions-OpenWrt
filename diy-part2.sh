@@ -16,3 +16,11 @@ sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generat
 sed -i 's/OpenWrt/Bin-Lean/g' package/base-files/files/bin/config_generate
 #关闭自建私有源签名验证
 sed -i '90d' package/system/opkg/Makefile
+# 清除旧版argon主题并拉取最新版
+pushd ./package/lean
+rm -rf luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
+popd
+
+# 更改主题
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
