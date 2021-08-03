@@ -66,8 +66,8 @@ jobs:
      
       - name: Commit changes
         run: |
-          git config --global user.email "304055589@qq.com"
-          git config --global user.name "bluskai"
+          git config --global user.email "ly88321@qq.com"
+          git config --global user.name "ly88321"
           git add .
           git commit -m "默认配置文件" -a
         
