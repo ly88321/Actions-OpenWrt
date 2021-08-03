@@ -2,6 +2,7 @@
 * [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) 
 * [Lean's SSR+](https://github.com/fw876/helloworld) 
 * [linkease's ddnsto](https://github.com/linkease/nas-packages) 
+* [P3TERX](https://github.com/P3TERX/Actions-OpenWrt) 
 
 ## 包含软件：
 * ShadowSocksR Plus
