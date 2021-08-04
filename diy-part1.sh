@@ -31,5 +31,5 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-pack
 git clone https://github.com/lisaac/luci-app-dockerman.git package/openwrt-packages/luci-app-dockerman
 
 #额外软件包
-echo >> feeds.conf.default
-echo 'src-git opentopd  https://github.com/sirpdboy/sirpdboy-package' >> feeds.conf.default
+#echo >> feeds.conf.default
+#echo 'src-git opentopd  https://github.com/sirpdboy/sirpdboy-package' >> feeds.conf.default
