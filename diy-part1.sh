@@ -25,7 +25,7 @@ echo >> feeds.conf.default
 echo 'src-git helloworld https://github.com/fw876/helloworld.git;master' >> feeds.conf.default
 
 # Add passwall feed source
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-packages/luci-app-passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-packages/luci-app-passwall
 
 # Add dockerman feed source
 #git clone https://github.com/lisaac/luci-app-dockerman.git package/openwrt-packages/luci-app-dockerman
