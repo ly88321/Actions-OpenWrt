@@ -13,7 +13,7 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 #修改主机名
-sed -i 's/OpenWrt/Bin-Lean/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/Xxun-Lean/g' package/base-files/files/bin/config_generate
 #关闭自建私有源签名验证
 sed -i '90d' package/system/opkg/Makefile
 # 清除旧版argon主题并拉取最新版
