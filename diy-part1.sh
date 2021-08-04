@@ -26,7 +26,10 @@ echo 'src-git helloworld https://github.com/fw876/helloworld.git;master' >> feed
 
 # Add passwall feed source
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-packages/luci-app-passwall
+
 # Add dockerman feed source
 git clone https://github.com/lisaac/luci-app-dockerman.git package/openwrt-packages/luci-app-dockerman
+
 #额外软件包
-git clone https://github.com/siropboy/sirpdboy-package package/sirpdboy-package
+echo >> feeds.conf.default
+echo 'src-git opentopd  https://github.com/sirpdboy/sirpdboy-package' >> feeds.conf.default
