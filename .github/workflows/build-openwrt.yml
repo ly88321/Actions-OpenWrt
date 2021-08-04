@@ -32,7 +32,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: x64精简版
+  FILE_NAME: X86(64bit)OpenWrt
 jobs:
   build:
     runs-on: ubuntu-18.04
