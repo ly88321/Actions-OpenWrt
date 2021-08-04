@@ -32,7 +32,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: X86(64bit)OpenWrt
+  FILE_NAME: 自用版🚀X86_64
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -162,11 +162,11 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-${{ env.FILE_NAME }}")"
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
-        echo "${{ env.useVersionInfo }}" >> release.txt
+        echo "编译时间：" >> release.txt
         echo "$(date +"%Y.%m.%d-%H%M")" >> release.txt
         echo "::set-output name=status::success"
 
@@ -196,7 +196,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Bark notification #IOS推送
-      run: curl "https://api.day.app/${{ secrets.Bark_TOKEN }}/${{ env.FILE_NAME }}发布成功-编译结束?sound=newsflash&isArchive=1"
+      run: curl "https://api.day.app/${{ secrets.Bark_TOKEN }}/${{ env.FILE_NAME }}发布成功-编译结束!?sound=newsflash&isArchive=1"
     - name: TG notification #TG推送
       if: steps.organize.outputs.status == 'success' && !cancelled()
-      run: curl "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=${{ env.FILE_NAME }}发布成功-编译结束\n${{ env.useVersionInfo }}"
+      run: curl "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=${{ env.FILE_NAME }}发布成功-编译结束!"
