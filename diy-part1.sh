@@ -27,5 +27,3 @@ echo 'src-git helloworld https://github.com/fw876/helloworld.git;master' >> feed
 # Add passwall feed source
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-packages/luci-app-passwall
 
-#额外软件包
-git clone https://github.com/siropboy/sirpdboy-package package/sirpdboy-package
