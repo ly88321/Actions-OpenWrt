@@ -25,8 +25,7 @@ echo >> feeds.conf.default
 echo 'src-git helloworld https://github.com/fw876/helloworld.git;master' >> feeds.conf.default
 
 # Add luci-app-dockerman
-echo >> feeds.conf.default
-echo 'src-git luci-app-dockerman https://github.com/lisaac/luci-app-dockerman.git;master' >>feeds.conf.default
+git clone https://github.com/lisaac/luci-app-dockerman.git package/openwrt-packages/luci-app-dockerman
 
 # Add passwall feed source
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/openwrt-packages/luci-app-passwall
