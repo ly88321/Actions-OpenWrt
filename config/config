@@ -129,6 +129,7 @@ CONFIG_DEFAULT_kmod-sound-hda-core=y
 CONFIG_DEFAULT_kmod-sound-hda-intel=y
 CONFIG_DEFAULT_kmod-sound-i8x0=y
 CONFIG_DEFAULT_kmod-sound-via82xx=y
+CONFIG_DEFAULT_kmod-tg3=y
 CONFIG_DEFAULT_kmod-tulip=y
 CONFIG_DEFAULT_kmod-tun=y
 CONFIG_DEFAULT_kmod-usb-audio=y
@@ -1846,6 +1847,11 @@ CONFIG_PACKAGE_autosamba=y
 #
 # end of ath10k Board-Specific Overrides
 
+#
+# ath11k Board-Specific Overrides
+#
+# end of ath11k Board-Specific Overrides
+
 # CONFIG_PACKAGE_aircard-pcmcia-firmware is not set
 # CONFIG_PACKAGE_amd64-microcode is not set
 CONFIG_PACKAGE_amdgpu-firmware=y
@@ -2564,7 +2570,7 @@ CONFIG_PACKAGE_kmod-r8168=y
 # CONFIG_PACKAGE_kmod-switch-rtl8366rb is not set
 # CONFIG_PACKAGE_kmod-switch-rtl8366s is not set
 # CONFIG_PACKAGE_kmod-switch-rtl8367b is not set
-# CONFIG_PACKAGE_kmod-tg3 is not set
+CONFIG_PACKAGE_kmod-tg3=y
 CONFIG_PACKAGE_kmod-tulip=y
 # CONFIG_PACKAGE_kmod-via-rhine is not set
 CONFIG_PACKAGE_kmod-via-velocity=y
